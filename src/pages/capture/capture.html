@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Capture</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button full icon-left (click)="capture()">
+    <ion-icon name="camera"></ion-icon>
+    Capture diocan
+  </button>
+
+  <button ion-button full icon-left [disabled]="currentImage === null">
+    <ion-icon name="checkmark"></ion-icon>
+    Save image
+  </button>
+
+
+  <div [hidden]="currentImage === null">
+    <ion-item>
+      <ion-input placeholder="My Awesome Image" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea placeholder="Enter a description" rows="4"></ion-textarea>
+    </ion-item>
+  </div>
+</ion-content>
